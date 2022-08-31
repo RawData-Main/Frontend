@@ -1,0 +1,29 @@
+header{
+    background-color:transparent;
+    padding-bottom: 1%;
+    border: 1px solid;
+    background-color:rgb(5,99,5);
+
+
+}
+
+#cart{
+    margin-left: 100%;
+    font-size: 150%;
+    color: white;
+    
+}
+#image{
+    background-color:rgb(5,99,5);
+    width: 5%;
+    margin-top: 0%;
+    margin-bottom: -3%;
+}
+#green{
+    color: white;
+    margin-left: -2%;
+}
+#login{
+    color: white;
+    margin-left: 88%;
+}
