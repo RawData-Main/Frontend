@@ -1,1 +1,66 @@
-<p>login works!</p>
+<body>
+    <div class="container col-md-12 mt-0">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">Log In</h3>
+
+                </div>
+                <div class="card-body">
+                    <!-- form group setting -->
+                    <form [formGroup]="loginForm">
+
+
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            </div>
+                            <input type="text" formControlName="email" class="form-control" placeholder="Email address"
+                                id="login_accno">
+
+                        </div>
+
+                        <!-- form validation -->
+                        <div *ngIf="(this.loginForm.get('email')?.touched || this.loginForm.get('email')?.dirty) && this.loginForm.get('email')?.errors"
+                            style="color: red;">Invaild Email</div>
+
+
+
+
+                        <!-- <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="create userId" id="login_accno" >
+
+                        </div> -->
+
+
+
+
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" formControlName="pwd" class="form-control" placeholder="Password"
+                                id="login_password">
+                        </div>
+
+                        <!-- form validation -->
+                        <div *ngIf="(this.loginForm.get('pwd')?.touched || this.loginForm.get('pwd')?.dirty) && this.loginForm.get('pwd')?.errors"
+                            style="color: red;">Invaild Password</div>
+
+
+
+                        <div class="form-group">
+                            <a type="submit" value="Login" (click)="login()" class="btn float-right login_btn "
+                                style="width:50%;">Login</a>
+                        </div>
+                    </form>
+                </div>
+                <p style="color:white;align-items:baseline;">not a user? Please <a routerLink='/register'>Register</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>

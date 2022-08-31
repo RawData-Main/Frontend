@@ -1,0 +1,31 @@
+.bannerh1{
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    color: #002c3e;
+    margin-bottom: 250px;
+    margin-left: 10px;
+}
+.bannerh1 span{
+    color: rgb(5, 99, 5);
+}
+.bannerh2{
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    color: #002c3e;
+    margin-bottom: 250px;
+    padding-left: 100px;
+}
+.bannerh2 span{
+    color: rgb(5, 99, 5);
+}
+.carousel-item img{
+    height: 600px;
+}
+
+
+/* section 2 :- categories */
+
+.categories .heading{
+    font-size: xx-large;
+    text-align: center;
+}
