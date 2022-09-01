@@ -1,0 +1,93 @@
+body{
+    background-image: url(../../../assets/loginBanner.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    height: 625px;
+    font-family: 'Numans', sans-serif;
+    }
+    
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 350px;
+margin-top: 100px;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.7);
+}
+
+/* .social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: rgb(5, 99, 5);
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+} */
+
+.card-header h3{
+color: white;
+}
+
+/* .social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+} */
+
+.input-group-prepend span{
+width: 50px;
+background-color: rgb(5, 99, 5);
+color: white;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+background-color: rgb(5, 99, 5);
+width: 100px;
+}
+
+
+.login_btn:hover{
+background-color: white;
+}
+
+.form-group a{
+    color: white;
+}
+.form-group a:hover{
+    color: rgb(5, 99, 5);
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
