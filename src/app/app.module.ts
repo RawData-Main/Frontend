@@ -19,7 +19,6 @@ import { PaymentComponent } from './Components/payment/payment.component';
 import { InvoiceComponent } from './Components/invoice/invoice.component';
 import { NgxPrintModule } from 'ngx-print';
 import {HttpClientModule} from '@angular/common/http';
-import { NgxImgZoomModule } from 'ngx-img-zoom';
 
 
 @NgModule({
@@ -50,7 +49,6 @@ import { NgxImgZoomModule } from 'ngx-img-zoom';
     RatingModule,
     NgxPrintModule,
     HttpClientModule,
-    NgxImgZoomModule
   ],
   providers: [],
   bootstrap: [AppComponent]
