@@ -27,7 +27,7 @@ ul{
     display: flex;
     flex-wrap: wrap;
     color: white;
-    margin-left: 84%;
+    margin-left: 80%;
 
 }
 @media(max-width:100%){
