@@ -21,11 +21,11 @@ userDetails:any;
     render(
       {
         id:"#myPaypalButtons",
-        currency:"INR",
+        currency:"USD",
         value:`${this.cart.totalPrice}`,
         onApprove:(details) => {
           // alert("Transaction Successfull")
-          this.userDetails=details
+          this.userDetails=details;
           this.router.navigateByUrl("/invoice")
          console.log("details",details);
          console.log("name",details.payer.name);
@@ -35,12 +35,12 @@ userDetails:any;
          this.payment.place1 = details.purchase_units[0].shipping.address.admin_area_1;
          this.payment.place2 = details.purchase_units[0].shipping.address.admin_area_2;
          this.payment.pincode = details.purchase_units[0].shipping.address.postal_code;
-         this.payment.email = details.payer.email_address
+         this.payment.email = details.payer.email_address;
 
-         this.payment.totalprice = details.purchase_units[0].payments.captures[0].amount.value
-         this.payment.paymentid = details.purchase_units[0].payments.captures[0].id
-         this.payment.status = details.status
-         this.payment.date = details.create_time
+         this.payment.totalprice = details.purchase_units[0].payments.captures[0].amount.value;
+         this.payment.paymentid = details.purchase_units[0].payments.captures[0].id;
+         this.payment.status = details.status;
+         this.payment.date = details.create_time;
          console.log("total",this.payment.paymentid);
          
          console.log("purchase",this.payment.street1);
