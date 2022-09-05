@@ -1,0 +1,65 @@
+<div class="success">
+    <h3>your payment was successfully completed<br>
+        <h5>Expected Delivery of your product is {{deliverydate | date}}</h5><br>
+    <img src="../../../assets/check.png" alt="">
+    </h3>
+</div>
+
+<div class="invoice" id="section">
+    <h3 id="heading">INVOICE</h3>
+    <div class="col-md-3">
+        <strong>BILL FROM</strong><br>
+        GreenBasket Plants <br>
+        Abc street <br>
+        kra line - 4 <br>
+        kakkanad,Kochi <br>
+        greenbasket@gmail.com
+
+    </div> <br><br><br>
+    <div class="col-md-3">
+        <strong>BILL TO</strong> <br>
+        {{name}} <br>
+        {{street1}} <br>
+        {{street2}} <br>
+        {{place1}} <br>
+        {{place2}} <br>
+        {{pincode}} <br>
+        {{email}} <br>
+
+    </div> <br><br>
+    <h6>Expected Delivery of your product is {{deliverydate | date}}</h6><br>
+
+    <table id="invoice_table" class="table table-success table-striped">
+        <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Qty</th>
+            <th>price</th>
+        </tr>
+        <tr>
+            <td>item name</td>
+            <td>jdshbjkhsbvjhb sjavjbas sjbfasjf asdfjhsaf </td>
+            <td>2</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <th>Payment id</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>{{paymentid}}</td>
+            <td>{{status}}</td>
+            <td>{{date | date}}</td>
+            <td>{{totalprice | currency:"USD"}}</td>
+        </tr>
+    </table>
+    
+
+</div> 
+
+<div class="button">
+    <button styleSheetFile="../../../assets/print.css" printSectionId="section" ngxPrint>Download Invoice</button> &nbsp;
+    <button routerLink="">Continue Shopping</button>
+</div>

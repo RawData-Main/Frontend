@@ -1,0 +1,48 @@
+<app-not-found [visible]="!item" notFoundMessage="Product Not Found!" resetLinkText="Go To HomePage"></app-not-found>
+
+
+<div *ngIf="item" class="container">
+    <img [src]="item.image" [alt]="item.name">
+
+    <div class="details">
+        <button type="button" class="btn btn-outline-success" routerLink="">Back</button>
+        <div class="header">
+            <span class="name">
+                {{item.name}}
+            </span>
+        </div>
+        <div class="star">
+            <star-rating [value]="item.rating" [totalstars]="5" checkedcolor="#ff424d" uncheckedcolor="grey" size="24px"
+                [readonly]="true">
+            </star-rating>
+        </div>
+        <h5>Expected Delivery About <strong>5-7</strong> Days</h5>
+        <!-- <div class="tag">
+            <app-tags [foodPageTags]="food.tags"></app-tags>
+        </div> -->
+        <div>
+            <span>{{item.description}}</span>
+        </div>
+        <div class="price">
+            <span>{{item.price|currency:"$"}}</span>
+        </div>
+        <button class="btn1" (click)='addToCart()'>Add to Cart</button>
+    </div>
+</div>
+
+<!-- <h1>
+  {{title}}
+</h1>
+<h3>Angular 7 Image Preview before Upload:</h3>
+<span style="color: red;" *ngIf="message">{{message}}</span>
+<input #file type="file" accept="image/*" (change)="preview(file.files)" />
+<img [src]="imgURL" height="200" *ngIf="imgURL" />
+<ngx-img-zoom
+  [zoomImageSrc]="zoomImageSrc"
+  [previewImageSrc]="previewImageSrc"
+  [imgStyle]="'width:515px; height:515px; bottom:0;  left:0;  right:0;  top:0;  margin:0 auto; border:1px solid #dcdcdc;'"
+  [resultStyle]="'width:824px; height:824px; background-repeat: no-repeat; z-index: 2; position:absolute;-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); top: 0;left: 100%;'"
+  [lensStyle]="'width:55px; height:55px'"
+  [enableZoom]="true"
+  [containerStyle]=""
+></ngx-img-zoom> -->
