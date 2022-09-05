@@ -1,0 +1,30 @@
+div{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    /* height: 100px; */
+    padding: 20px;
+}
+div a {
+    /* background-color: #c3c2c2; */
+    /* padding: .3rem 1rem;
+    margin: .2rem .15rem; */
+    /* width: 200px; */
+    border-radius: 1rem;
+    color: rgb(5, 99, 5);
+    font-weight: 600;
+    text-align: center;
+    padding-top: 15px;
+    text-decoration: none;
+}
+div a img{
+    width: 300px;
+}
+div a img:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+h2{
+    text-align: center;
+    margin-top: 20px;
+}

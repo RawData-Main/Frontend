@@ -1,0 +1,5 @@
+<!-- <button routerLink="">All Items</button> -->
+<h2>Categories</h2>
+<div *ngIf="categories">
+    <a *ngFor="let item of categories" routerLink="/category/{{item.name}}">{{item.name}} <br> <img src="{{item.image}}" alt=""></a>
+</div>

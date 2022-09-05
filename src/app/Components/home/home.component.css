@@ -2,7 +2,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 4.5rem;
     color: #002c3e;
-    margin-bottom: 250px;
+    /* margin-bottom: 250px; */
     margin-left: 10px;
 }
 .bannerh1 span{
@@ -12,20 +12,59 @@
     font-family: 'Playfair Display', serif;
     font-size: 4.5rem;
     color: #002c3e;
-    margin-bottom: 250px;
+    /* margin-bottom: 250px; */
     padding-left: 100px;
 }
 .bannerh2 span{
     color: rgb(5, 99, 5);
 }
-.carousel-item img{
-    height: 600px;
+/* .carousel-item img{
+    height: 10%;
+} */
+
+
+/* list items */
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+ul li a{
+    height: 35rem;
+    width: 20rem;
+    border: 1px solid  whitesmoke;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #002c3e;
+    object-fit: fill;
+    text-decoration: none;
+}
+ul li a img{
+    height: 23rem;
+}
+li a:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.content{
+    padding: .5rem 1rem;
+    position: relative;
+}
+.product-item-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price{
+    color: green;
+    margin-top: .2rem;
+    margin: 0.5rem;
 }
 
-
-/* section 2 :- categories */
-
-.categories .heading{
-    font-size: xx-large;
-    text-align: center;
-}

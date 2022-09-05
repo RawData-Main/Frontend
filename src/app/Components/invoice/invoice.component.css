@@ -1,0 +1,44 @@
+.success{
+    height: 20%;
+    border: 2px solid #3bb54a;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    padding: 3%;
+    border-radius: 10px;
+}
+.success h3{
+    color: #3bb54a;
+    text-align: center;
+}
+.success img{
+    height: 80px;
+    text-align: center;
+    align-items: center;
+}
+
+.invoice{
+    border: 1px solid black;
+    padding: 40px;
+    margin: 40px;
+    width: 60%;
+    margin-left: 20%;
+}
+.invoice h3{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.button{
+    text-align: center;
+    margin-bottom: 50px;   
+}
+.button button{
+    background-color: #3bb54a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+}

@@ -1,0 +1,67 @@
+<div class="row">
+    <app-sidebar class="col-md-2"></app-sidebar>
+
+    <div class="col-md-10">
+        <section class="mt-5">
+            <div class="container mt-5">
+          
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Orginal price</th>
+                    <th scope="col">Image</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- {{#each products}} -->
+                    <tr>
+                      <th scope="row">
+                          <!-- {{inc @index}} -->
+                          1
+                        </th>
+                      <td>
+                        <!-- {{this.brand}} -->
+                        brand_name
+                      </td>
+          
+                      <td>
+                          <!-- {{this.category}} -->
+                          category name
+                      </td>
+                      <td>
+                        <!-- {{this.description}} -->
+                        description
+                      </td>
+                      <td>
+                        <!-- {{this.orginalPrice}} -->
+                        price
+                      </td>
+          
+                      <!-- <td>
+                        {{this.offerPrice}}
+                      </td>
+                      <td>
+                        {{this.offerpercentage}}
+                      </td> -->
+                      <td><img
+                          style="width: 50px; hieght: 50px;"
+                          src="../../../../assets/plants.jpg"
+                          alt=""
+                        />
+          
+                      </td>
+                    </tr>
+                  <!-- {{/each}} -->
+          
+                </tbody>
+              </table>
+            </div>
+          
+          </section>
+    </div>
+</div>
+
