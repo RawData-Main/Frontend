@@ -27,6 +27,7 @@ export class RegisterComponent implements OnInit {
     var email = this.registerForm.value.email;
     var pwd = this.registerForm.value.pwd;
 
+
     if(this.registerForm.valid){
       alert("Register success")
         this.router.navigateByUrl("/login")

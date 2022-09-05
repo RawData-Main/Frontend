@@ -1,3 +1,6 @@
+<!-- header -->
+
+<app-header></app-header>
 
 <!-- carousel -->
 
@@ -33,24 +36,56 @@
                         <br>
                         On Everything
                     </h1>
-    
+
                     <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    
+
 </section>
 
 <!-- categories -->
+
+<app-category></app-category>
+
+<!-- searchBar -->
+
+<app-search></app-search>
+
+<!-- if is not available -->
+<app-not-found [visible]="!items || items.length <=0" resetLinkText="Reset Search"></app-not-found>
+
+
+<!--list items -->
+<ul>
+    <li *ngFor="let item of items">
+        <a routerLink="/item/{{item.id}}">
+            <img src="{{item.image}}" alt="item images">
+            <div class="content">
+                <div class="name">
+                    {{item.name}}
+                </div>
+                <star-rating [value]="item.rating" [totalstars]="5" checkedcolor="#ff424d" uncheckedcolor="grey" size="24px"
+                    [readonly]="true">
+                </star-rating>
+            </div>
+            <div class="price">
+                {{item.price|currency:"$"}}
+            </div>
+        </a>
+    </li>
+</ul>
 
 <section>
     <div class="categories">
