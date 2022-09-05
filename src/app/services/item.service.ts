@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Category } from '../Models/categories';
 import { Items } from '../Models/item';
@@ -7,7 +8,7 @@ import { Items } from '../Models/item';
 })
 export class ItemService {
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
 
   getItemById(id:number):Items{
     return this.getAll().find(item => item.id == id)!;
@@ -28,6 +29,7 @@ export class ItemService {
   }
 
   getAll(): Items[] {
+    // return this.
     return [
       {
         id: 1,
