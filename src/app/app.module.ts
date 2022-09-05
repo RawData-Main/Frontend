@@ -6,6 +6,7 @@ import { HeaderComponent } from './Components/header/header.component';
 import { HomeComponent } from './Components/home/home.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { LoginComponent } from './Components/login/login.component';
+import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoryComponent } from './Components/category/category.component';
@@ -35,7 +36,9 @@ import { NgxImgZoomModule } from 'ngx-img-zoom';
     CartComponent,
     NotFoundComponent,
     PaymentComponent,
-    InvoiceComponent
+    InvoiceComponent,
+    AboutUsComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

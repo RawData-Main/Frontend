@@ -1,5 +1,4 @@
 header{
-    background-color:transparent;
     padding-bottom: 1%;
     background-color:#173c2b;
 
@@ -22,7 +21,18 @@ header{
     color: white;
     margin-left: -2%;
 }
-#login{
+ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
     color: white;
-    margin-left: 88%;
+    margin-left: 84%;
+
+}
+@media(max-width:100%){
+    .header{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
 }

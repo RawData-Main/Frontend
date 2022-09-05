@@ -8,8 +8,20 @@ import { ViewComponent } from './Components/view/view.component';
 import { CartComponent } from './Components/cart/cart.component';
 import { PaymentComponent } from './Components/payment/payment.component';
 import { InvoiceComponent } from './Components/invoice/invoice.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import {AboutUsComponent} from './Components/about-us/about-us.component'
+
 
 const routes: Routes = [
+  {
+    path:'header',component:HeaderComponent
+  },
+  {
+    path:'footer',component:FooterComponent
+  },
+  {
+    path:'about-us',component:AboutUsComponent
+  },
   {
     path:'header',component:HeaderComponent
   },
@@ -44,6 +56,9 @@ const routes: Routes = [
     path:"report-user",loadChildren:()=>import('./report-user/report-user/report-user.module').then(m=>m.ReportUserModule)
   }
 ];
+
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
