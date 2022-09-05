@@ -8,7 +8,6 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { LoginComponent } from './Components/login/login.component';
 import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { RegisterComponent } from './Components/register/register.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoryComponent } from './Components/category/category.component';
 import { SearchComponent } from './Components/search/search.component';
@@ -52,8 +51,6 @@ import { NgxImgZoomModule } from 'ngx-img-zoom';
     NgxPrintModule,
     HttpClientModule,
     NgxImgZoomModule
-    
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
