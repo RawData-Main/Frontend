@@ -49,6 +49,7 @@ import {HttpClientModule} from '@angular/common/http';
     RatingModule,
     NgxPrintModule,
     HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
