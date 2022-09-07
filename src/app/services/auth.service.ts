@@ -30,6 +30,7 @@ export class AuthService {
 
     return this.http.post('https://shaky-cups-train-202-164-133-86.loca.lt/user/login/',data)
   }
+  
 }
 
 

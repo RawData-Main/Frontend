@@ -50,7 +50,6 @@ import {HttpClientModule} from '@angular/common/http';
     NgxPrintModule,
     HttpClientModule,
     
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

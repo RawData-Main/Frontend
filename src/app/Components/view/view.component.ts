@@ -35,7 +35,7 @@ export class ViewComponent implements OnInit {
 
     this.id = this.route.snapshot.params;
     console.log(this.id.id);
-   }
+  }
 
   ngOnInit(): void {
     this.viewDatas = this.getDatabyId(this.id.id)
@@ -61,5 +61,7 @@ export class ViewComponent implements OnInit {
   // this.cs.addToCart(this.item)
   // this.router.navigateByUrl('/cart')
   }
+
+
 
 }
