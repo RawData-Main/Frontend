@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="4000">
-                <img src="../../../assets/carousel1.jpg" class="d-block w-100" alt="...">
+                <img src="../../../assets/carousel2.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="bannerh2">
                         <span>
@@ -64,12 +64,12 @@
 <app-search></app-search>
 
 <!-- if is not available -->
-<app-not-found [visible]="!items || items.length <=0" resetLinkText="Reset Search"></app-not-found>
+<!-- <app-not-found [visible]="!items || items.length <=0" resetLinkText="Reset Search"></app-not-found> -->
 
 
 <!--list items -->
 <ul>
-    <li *ngFor="let item of items">
+    <li *ngFor="let item of datas">
         <a routerLink="/item/{{item.id}}">
             <img src="{{item.image}}" alt="item images">
             <div class="content">

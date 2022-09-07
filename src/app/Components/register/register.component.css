@@ -88,6 +88,8 @@ background-color: white;
 color: white;
 }
 
-.links a{
+p a{
 margin-left: 4px;
+color: blue;
+cursor: pointer;
 }
