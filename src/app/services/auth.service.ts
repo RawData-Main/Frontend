@@ -10,4 +10,5 @@ export class AuthService {
   register(fname:any,lname:any,email:any,pwd:any){
     
   }
+  
 }
