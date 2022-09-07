@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,24 +11,38 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   loginForm = this.fb.group({
-    email:['',[Validators.required,Validators.email]],
-    pwd:['',[Validators.required,Validators.pattern('[a-zA-Z0-9 ]*')]]
+    username: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9 ]*')]],
+    password: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9 ]*')]]
   })
 
-  constructor(private fb:FormBuilder,private router:Router) { }
+  constructor(private fb: FormBuilder, private router: Router, private auth: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  login(){
-    var email = this.loginForm.value.email;
-    var pwd = this.loginForm.value.pwd;
+  login() {
+    var username = this.loginForm.value.username;
+    var password = this.loginForm.value.password;
 
-    if(this.loginForm.valid){
-      alert("login success")
-      this.router.navigateByUrl("")
+    if (this.loginForm.valid) {
+      this.auth.login(username, password).subscribe((result: any) => {
+        if (result) {
+          // store token to localstorage
+
+          // localStorage.setItem("token",JSON.stringify(result.token))
+
+          // alert(result.message)
+          alert("login success")
+          this.router.navigateByUrl("")
+        }
+      },
+        (result) => {
+          // alert(result.error.message);
+          alert("invalid password")
+        }
+      )
     }
-    else{
+    else {
       alert("invalid form")
     }
 

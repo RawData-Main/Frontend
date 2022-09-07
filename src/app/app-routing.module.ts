@@ -11,6 +11,7 @@ import { CartComponent } from './Components/cart/cart.component';
 import { PaymentComponent } from './Components/payment/payment.component';
 import { InvoiceComponent } from './Components/invoice/invoice.component';
 
+
 const routes: Routes = [
   {
     path:'header',component:HeaderComponent
@@ -51,7 +52,6 @@ const routes: Routes = [
   {
     path:"report-user",loadChildren:()=>import('./report-user/report-user/report-user.module').then(m=>m.ReportUserModule)
   }
-
 ];
 
 

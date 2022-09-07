@@ -16,9 +16,9 @@ export class CategoryComponent implements OnInit {
   constructor(private is:ItemService) { }
 
   ngOnInit(): void {
-    if(!this.itemPageCategories)
-    this.categories = this.is.getAllCategory();
-    console.log("items",this.categories);
+    // if(!this.itemPageCategories)
+    // this.categories = this.is.getAllCategory();
+    // console.log("items",this.categories);
     
   }
 

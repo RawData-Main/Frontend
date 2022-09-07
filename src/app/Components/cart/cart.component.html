@@ -24,7 +24,7 @@ resetLinkText="Go To Home Page!"></app-not-found>
                 </select>
             </div>
             <div>
-                {{cartItem.item.price | currency:"₹"}}
+                {{cartItem.item.price | currency:"USD"}}
             </div>
             <div>
                 <button class="remove-button" (click)="removeFromCart(cartItem)">Remove</button>
@@ -34,7 +34,7 @@ resetLinkText="Go To Home Page!"></app-not-found>
     <div class="checkout">
         <div>
             <div class="food-count">{{cart.items.length}}</div>
-            <div class="total-price">{{cart.totalPrice|currency:"₹"}}</div>    
+            <div class="total-price">{{cart.totalPrice|currency:"USD"}}</div>    
         </div>
         <!-- <a routerLink="/payment">Proceed to Checkout</a> -->
         <app-payment></app-payment>

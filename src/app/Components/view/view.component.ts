@@ -14,33 +14,52 @@ export class ViewComponent implements OnInit {
 
   title = "CodeSandbox";
  
-  public imagePath:any;
-  imgURL: any;
-  public message: string | undefined;
- 
-  enableZoom: Boolean = true;
-  previewImageSrc: any;
-  zoomImageSrc: any;
+  // public imagePath:any;
+  // imgURL: any;
+  // public message: string | undefined;
+  // enableZoom: Boolean = true;
+  // previewImageSrc: any;
+  // zoomImageSrc: any;
+  // item!:Items;
 
-  item!:Items;
+  id:any;
+  public viewDatas = <any>[];
+  data:any = [];
+
+
   constructor(private route:ActivatedRoute,private is:ItemService,private cs:CartService,private router:Router) {
-    route.params.subscribe((params)=>{
-      if(params['id'])
-      this.item = is.getItemById(params['id'])
-    })
-   }
+    // route.params.subscribe((params)=>{
+    //   if(params['id'])
+    //   this.item = is.getItemById(params['id'])
+    // })
 
-  ngOnInit(): void {
+    this.id = this.route.snapshot.params;
+    console.log(this.id.id);
   }
 
-  // addToCart(){
-  //   this.cartService.addToCart(this.food)
-  //   this.router.navigateByUrl('/cart-page')
-  // }
+  ngOnInit(): void {
+    this.viewDatas = this.getDatabyId(this.id.id)
+    console.log("data",this.getDatabyId(this.id.id));
+    this.data.push(this.is.viewData)
+  }
+
+  getDatabyId(id:any){
+    this.is.getApi().forEach((data:any)=>{
+      if(data.id == id){
+        console.log(data);
+
+        this.viewDatas = data;
+        return this.viewDatas;
+        
+      }
+    })
+  }
+
+
 
   addToCart(){
-  this.cs.addToCart(this.item)
-  this.router.navigateByUrl('/cart')
+  // this.cs.addToCart(this.item)
+  // this.router.navigateByUrl('/cart')
   }
 
 
