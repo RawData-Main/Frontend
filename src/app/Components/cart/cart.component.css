@@ -110,3 +110,22 @@ ul .remove-button:hover{
     opacity: 1;
     cursor: pointer;
 }
+
+.center{
+    top:50%;
+    left:40%;
+    transform: translate(45%,-45%);
+    text-align: center;
+    position: relative;
+    margin-top: 10%;
+}
+
+.center img{
+    color: inherit;
+    border: none;
+    outline: none;
+    width: 160px;
+    height: 140px;
+    text-decoration: none;
+    margin: 20px 0;
+}

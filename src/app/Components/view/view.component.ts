@@ -38,29 +38,37 @@ export class ViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.viewDatas = this.getDatabyId(this.id.id)
-    console.log("data",this.getDatabyId(this.id.id));
-    this.data.push(this.is.viewData)
-  }
+    // this.viewDatas = this.getDatabyId(this.id.id)
+    // console.log("data",this.getDatabyId(this.id.id));
+    // this.data.push(this.is.viewData)
 
-  getDatabyId(id:any){
-    this.is.getApi().forEach((data:any)=>{
-      if(data.id == id){
-        console.log(data);
-
-        this.viewDatas = data;
-        return this.viewDatas;
-        
-      }
+    this.is.getApi().subscribe((res:any) =>{
+      res.forEach((a:any)=> {
+        Object.assign(a,{quantity:1,total:a.price})
+      })
     })
   }
 
 
+  // addtoCart(){
 
-  addToCart(){
-  // this.cs.addToCart(this.item)
-  // this.router.navigateByUrl('/cart')
-  }
+  // }
+
+
+  // getDatabyId(id:any){
+  //   this.is.getApi().forEach((data:any)=>{
+  //     if(data.id == id){
+  //       console.log(data);
+
+  //       this.viewDatas = data;
+  //       return this.viewDatas;
+        
+  //     }
+  //   })
+  // }
+
+
+
 
 
 

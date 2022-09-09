@@ -49,8 +49,8 @@ export class InvoiceComponent implements OnInit {
     
   }
 
-  setCart(){
-    this.cartItems = this.cart.getCart();
-  }
+  // setCart(){
+  //   this.cartItems = this.cart.getCart();
+  // }
 
 }
