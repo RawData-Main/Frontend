@@ -14,7 +14,7 @@ export class PaymentComponent implements OnInit {
 cart!:Cart;
 userDetails:any;
   constructor(private router:Router,private cs:CartService,private payment:PaymentService) { 
-    this.setCart();
+    // this.setCart();
   }
 
   ngOnInit(): void {
@@ -50,8 +50,8 @@ userDetails:any;
     )
   }
 
-  setCart(){
-    this.cart = this.cs.getCart();
-  }
+  // setCart(){
+  //   this.cart = this.cs.getCart();
+  // }
 
 }

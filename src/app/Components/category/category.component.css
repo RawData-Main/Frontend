@@ -4,6 +4,7 @@ div{
     justify-content: space-between;
     /* height: 100px; */
     padding: 20px;
+    margin-bottom: 50px;
 }
 div a {
     /* background-color: #c3c2c2; */
@@ -19,6 +20,7 @@ div a {
 }
 div a img{
     width: 300px;
+    height: 200px;
 }
 div a img:hover{
     transform: scale(1.05);
