@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  
 
   loginForm = this.fb.group({
     username: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9 ]*')]],

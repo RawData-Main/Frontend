@@ -1,10 +1,10 @@
-div{
+.parent{
     display: flex;
+    text-align: center;
     /* flex-wrap: wrap; */
     justify-content: space-between;
     /* height: 100px; */
     padding: 20px;
-    margin-bottom: 50px;
 }
 div a {
     /* background-color: #c3c2c2; */

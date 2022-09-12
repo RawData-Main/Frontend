@@ -19,33 +19,54 @@ resetLinkText="Go To Home Page!"></app-not-found> -->
 </ng-container>
 
 <ng-container *ngIf="products.length != 0">
-    <div class="container" *ngFor="let item of products , let i = index">
-        <ul>
-            <li>
-                <div>
-                    <img src="{{item.image}}" alt="">
+    <div>
+
+        <div class="container" *ngFor="let item of products , let i = index">
+            <ul>
+                <li>
+                    <div>
+                        <img src="{{item.image}}" alt="">
+                    </div>
+                    <div>
+                        <a class="food-name">{{item.name}}</a>
+                    </div>
+                    <!-- <div>
+                        <select name="1" (change)="qtyPrice(i)" [(ngModel)]="qty">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div> -->
+                    <div>
+                        {{item.price}}
+                    </div>
+                    <div>
+                        <button class="btn btn-danger" (click)="removeProduct(item)">remove</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="col-md-2 checkout">
+            <div>
+                <div class="food-count">
+                    {{products.length}}
                 </div>
-                <div>
-                    <a class="food-name">{{item.name}}</a>
+                <div class="total-price">
+                    789
                 </div>
-                <div>
-                    <select name="" id="">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <div>
-                    {{item.price}}
-                </div>
-                <div>
-                    <button class="btn btn-danger" (click)="removeProduct(item)">remove</button>
-                </div>
-            </li>
-        </ul>
+            </div>
+        </div> -->
     </div>
+
+
+    <div style="text-align: center;">
+        <button class="btn btn-success" routerLink="/payment">Proceed to Checkout</button>&nbsp;
+        <button class="btn btn-danger" (click)="removeAllProduct()">Empty Cart</button>&nbsp;
+        <button class="btn btn-primary" routerLink="">Continue Shopin</button>
+    </div>
+
 </ng-container>
 
 
