@@ -2,8 +2,6 @@
     padding-bottom: 0%;
     background-color:#173c2b;
     margin-top: -1%;
-
-
 }
 ol{
     list-style: none;
@@ -14,15 +12,9 @@ ol{
     font-size: 74%;
     cursor: pointer;
 }
-.contact{
-
-}
 #faq{
     margin-left: 65%;
     cursor: pointer;
-}
-.container{
-
 }
 #cart{
     margin-left: 202%;
@@ -55,14 +47,12 @@ color: white;
 text-decoration: none;
 cursor: pointer;
 }
-
 ul{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     color: white;
     margin-left: 80%;
-
 }
 
 @media(max-width:100%){
@@ -70,5 +60,4 @@ ul{
         width: 50%;
         margin-bottom: 30px;
     }
-
 }
