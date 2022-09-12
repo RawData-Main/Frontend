@@ -23,7 +23,7 @@ export class ViewComponent implements OnInit {
   // item!:Items;
 
   id:any;
-  public viewDatas = <any>[];
+  viewDatas:any = [];
   data:any = [];
 
 
@@ -33,35 +33,52 @@ export class ViewComponent implements OnInit {
     //   this.item = is.getItemById(params['id'])
     // })
 
-    this.id = this.route.snapshot.params;
-    console.log(this.id.id);
+    // this.id = this.route.snapshot.params;
+    // console.log(this.id.id);
   }
 
   ngOnInit(): void {
-    this.viewDatas = this.getDatabyId(this.id.id)
-    console.log("data",this.getDatabyId(this.id.id));
-    this.data.push(this.is.viewData)
-  }
+    // this.viewDatas = this.getDatabyId(this.id.id)
+    // console.log("data",this.getDatabyId(this.id.id));
+    // this.data.push(this.is.viewData)
 
-  getDatabyId(id:any){
-    this.is.getApi().forEach((data:any)=>{
-      if(data.id == id){
-        console.log(data);
+    // this.is.getApi().subscribe((res:any) =>{
+    //   res.forEach((a:any)=> {
+    //     Object.assign(a,{quantity:1,total:a.price})
+    //   })
+    // })
 
-        this.viewDatas = data;
-        return this.viewDatas;
-        
-      }
+    this.cs.getProductData().subscribe(res => {
+      this.viewDatas.push(res[0]);
+      console.log("abc",this.viewDatas);
+      this.is.singlePrice = res[0].price;
+      console.log("singleprice",this.is.singlePrice);
+      this.is.invoiceData = this.viewDatas
+      console.log("invoice",this.is.invoiceData);
+      
     })
   }
 
 
+  // addtoCart(item:any){
+  //   this.cs.viewToCart(item);
+  //   this.router.navigateByUrl("cart")
+  // }
 
-  addToCart(){
-  // this.cs.addToCart(this.item)
-  // this.router.navigateByUrl('/cart')
+  Buy(){
+    this.router.navigateByUrl("/payment2")
   }
 
 
+  // getDatabyId(id:any){
+  //   this.is.getApi().forEach((data:any)=>{
+  //     if(data.id == id){
+  //       console.log(data);
 
+  //       this.viewDatas = data;
+  //       return this.viewDatas;
+        
+  //     }
+  //   })
+  // }
 }

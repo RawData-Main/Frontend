@@ -17,7 +17,7 @@ export class AuthService {
       password2
     }
 
-    return this.http.post('https://shaky-cups-train-202-164-133-86.loca.lt/user/signup/customer/',data)
+    return this.http.post('https://empty-sites-show-202-164-133-86.loca.lt/user/signup/customer/',data)
   }
 
 
@@ -27,8 +27,9 @@ export class AuthService {
       username,
       password
     }
+    localStorage.setItem("CurrentUname",username)
 
-    return this.http.post('https://shaky-cups-train-202-164-133-86.loca.lt/user/login/',data)
+    return this.http.post('https://empty-sites-show-202-164-133-86.loca.lt/user/login/',data)
   }
   
 }

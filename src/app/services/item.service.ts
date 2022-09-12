@@ -9,6 +9,9 @@ import { Items } from '../Models/item';
 export class ItemService {
 
   public viewData: any;
+  singlePrice:any;
+
+  invoiceData:any;
 
   constructor(private http : HttpClient) { }
 
@@ -30,9 +33,22 @@ export class ItemService {
   //   ]
   // }
 
-  getApi(){
-    return this.http.get<any>("http://little-jobs-bow-157-44-152-63.loca.lt/product/product/")
+  getApi():any{
+    return this.http.get<any>("http://empty-sites-show-202-164-133-86.loca.lt/product/product/");
   }
+
+  getItemByCategory(category:string):any{
+    return category == 'all' ? this.getApi() : this.getApi().filter((item:any) => item.category?.includes(category))
+  }
+
+  getcategory(){
+    return this.http.get<any>("http://empty-sites-show-202-164-133-86.loca.lt/product/category/");
+  }
+
+
+
+  
+
 
   // getDatabyId(id:any){
   //   this.getApi().forEach((data:any)=>{

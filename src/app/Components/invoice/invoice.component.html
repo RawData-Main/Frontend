@@ -33,27 +33,19 @@
         <tr>
             <th>Item</th>
             <th>Description</th>
-            <th>Qty</th>
             <th>price</th>
         </tr>
-        <tr>
-            <td>item name</td>
-            <td>jdshbjkhsbvjhb sjavjbas sjbfasjf asdfjhsaf </td>
-            <td>2</td>
-            <td>20</td>
+        <tr *ngFor="let item of productDetailscart">
+            <td>{{item.name}}</td>
+            <td>{{item.description}} </td>
+            <td>{{item.price}}</td>
         </tr>
-        <tr>
-            <th>Payment id</th>
-            <th>Status</th>
-            <th>Date</th>
-            <th>Total</th>
+        <tr *ngFor="let item of productDetailsview">
+            <td>{{item.name}}</td>
+            <td>{{item.description}} </td>
+            <td>{{item.price}}</td>
         </tr>
-        <tr>
-            <td>{{paymentid}}</td>
-            <td>{{status}}</td>
-            <td>{{date | date}}</td>
-            <td>{{totalprice | currency:"USD"}}</td>
-        </tr>
+
     </table>
     
 

@@ -9,30 +9,53 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-cart!:Cart;
-  constructor(private cartService:CartService) {
-    this.setCart();
-   }
+  products: any = [];
+  allProducts: any = 0;
+  qty:any;
+
+
+  constructor(private cartService: CartService) {
+    // this.setCart();
+  }
 
   ngOnInit(): void {
-    console.log("total",this.cart.totalPrice);
+    // console.log("total",this.cart.totalPrice);
+    this.cartService.getProductData().subscribe(res => {
+    this.products = res;
+    this.allProducts = this.cartService.getTotalAmount();
+    })
+  }
+
+  removeProduct(item: any) {
+    this.cartService.removeCartData(item);
+  }
+
+  removeAllProduct() {
+    this.cartService.removeAllCart();
+  }
+
+  qtyPrice(i:any){
+    console.log("price",this.products[i].price); 
+  }
+
+  changeQuantity(){
     
   }
 
-  setCart(){
-    this.cart = this.cartService.getCart();
-  }
+  // setCart(){
+  //   this.cart = this.cartService.getCart();
+  // }
 
-  removeFromCart(cartItem:CartItem){
-    this.cartService.removeFromCart(cartItem.item.id);
-    this.setCart();
-  }
+  // removeFromCart(cartItem:CartItem){
+  //   this.cartService.removeFromCart(cartItem.item.id);
+  //   this.setCart();
+  // }
 
-  changeQuantity(cartItem:CartItem,quantityInString:string){
-    const quantity = parseInt(quantityInString);
-    this.cartService.changeQuantity(cartItem.item.id,quantity);
-    this.setCart();
-  }
+  // changeQuantity(cartItem:CartItem,quantityInString:string){
+  //   const quantity = parseInt(quantityInString);
+  //   this.cartService.changeQuantity(cartItem.item.id,quantity);
+  //   this.setCart();
+  // }
 
 
 }

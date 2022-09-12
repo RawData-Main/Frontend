@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cart } from 'src/app/Models/cart';
 import { CartService } from 'src/app/services/cart.service';
+import { ItemService } from 'src/app/services/item.service';
 import { PaymentService } from 'src/app/services/payment.service';
 import { PaymentComponent } from '../payment/payment.component';
 
@@ -27,8 +28,11 @@ export class InvoiceComponent implements OnInit {
 
   today = new Date()
    deliverydate = new Date()
+   productDetailscart:any = []
+   productDetailsview:any = []
 
-  constructor(private payment:PaymentService,private cart:CartService) { }
+
+  constructor(private payment:PaymentService,private cart:CartService,private is:ItemService) { }
 
   ngOnInit(): void {
     console.log("uname",this.payment.name);
@@ -46,11 +50,15 @@ export class InvoiceComponent implements OnInit {
     this.totalprice = this.payment.totalprice
 
     this.deliverydate.setDate(this.today.getDate() + 7)
-    
+
+    this.productDetailscart = this.is.invoiceData 
+    // console.log("invv",this.productDetails);
+    this.productDetailsview = this.cart.cartList;
+    // console.log("invc",this.productDetails);
   }
 
-  setCart(){
-    this.cartItems = this.cart.getCart();
-  }
+  // setCart(){
+  //   this.cartItems = this.cart.getCart();
+  // }
 
 }

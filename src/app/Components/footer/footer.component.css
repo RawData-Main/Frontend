@@ -10,11 +10,6 @@ body{
     box-sizing: border-box;
     
 }
-.container{
-    max-width: 1290px;
-    background-color: #173c2b;
-    margin: auto;
-}
 #tree{
     width: 25%;
     margin-top: 5%;

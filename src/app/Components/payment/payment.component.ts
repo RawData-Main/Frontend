@@ -14,15 +14,17 @@ export class PaymentComponent implements OnInit {
 cart!:Cart;
 userDetails:any;
   constructor(private router:Router,private cs:CartService,private payment:PaymentService) { 
-    this.setCart();
+    // this.setCart();
   }
 
   ngOnInit(): void {
+    console.log("tp",this.cs.totalPrice);
+    
     render(
       {
         id:"#myPaypalButtons",
         currency:"USD",
-        value:`${this.cart.totalPrice}`,
+        value:`${this.cs.totalPrice}`,
         onApprove:(details) => {
           // alert("Transaction Successfull")
           this.userDetails=details;
@@ -50,8 +52,8 @@ userDetails:any;
     )
   }
 
-  setCart(){
-    this.cart = this.cs.getCart();
-  }
+  // setCart(){
+  //   this.cart = this.cs.getTotalAmount;
+  // }
 
 }
