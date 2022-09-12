@@ -12,6 +12,8 @@ export class CartService {
 
   cartDataList:any = [];
   productList = new BehaviorSubject<any>([]);
+  totalPrice:any = [];
+  cartList:any;
 
   constructor (private http:HttpClient) {}
 
@@ -28,10 +30,29 @@ export class CartService {
 
   // add  to  cart detils
   addToCart(product:any){
+    console.log(this.cartDataList);
+    
     this.cartDataList.push(product);
     this.productList.next(this.cartDataList);
     this.getTotalAmount();
+    alert("Item added your cart")
     console.log("item",this.cartDataList);
+    this.cartList = this.cartDataList;
+  }
+
+  //add to cart in view
+  viewToCart(product:any){
+    this.cartDataList.push(product);
+    this.productList.next(this.cartDataList)
+    this.getTotalAmount();
+    alert("item added")
+  }
+
+  getViewData(product:any){
+    this.cartDataList.push(product);
+    this.productList.next(this.cartDataList);
+    // this.getTotalAmount();
+    console.log("xyz",this.cartDataList);
     
   }
 
@@ -40,7 +61,11 @@ export class CartService {
   getTotalAmount(){
     let grandTotal = 0;
     this.cartDataList.map((a:any)=>{
-      grandTotal += a.total
+      grandTotal += a.price
+      // console.log("gt",grandTotal);
+      // console.log("a",a.price);
+      this.totalPrice = grandTotal;
+      // console.log("tp",this.totalPrice);    
     })
   }
 

@@ -1,0 +1,23 @@
+<ul>
+    <li *ngFor="let item of plantsData">
+        <a >
+            <img src="{{item.image}}" (click)="view(item)" alt="item images">
+            <div class="content">
+                <div class="name">
+                    {{item.name}}
+                </div>
+                <star-rating [value]="item.rating" [totalstars]="5" checkedcolor="#ff424d" uncheckedcolor="grey" size="24px"
+                    [readonly]="true">
+                </star-rating>
+            </div>
+            <div class="price">
+                {{item.price|currency:"$"}}
+            </div>
+            <div>
+                <div class="addtobtn">
+                    <button type="button" class="btn btn-outline-success" (click)="addToCart(item)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>

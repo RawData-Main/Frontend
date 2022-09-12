@@ -9,6 +9,9 @@ import { Items } from '../Models/item';
 export class ItemService {
 
   public viewData: any;
+  singlePrice:any;
+
+  invoiceData:any;
 
   constructor(private http : HttpClient) { }
 
@@ -31,7 +34,7 @@ export class ItemService {
   // }
 
   getApi():any{
-    return this.http.get<any>("http://poor-worms-push-103-104-46-74.loca.lt/product/product/");
+    return this.http.get<any>("http://empty-sites-show-202-164-133-86.loca.lt/product/product/");
   }
 
   getItemByCategory(category:string):any{
@@ -39,8 +42,12 @@ export class ItemService {
   }
 
   getcategory(){
-    return this.http.get<any>("http://poor-worms-push-103-104-46-74.loca.lt/product/category/");
+    return this.http.get<any>("http://empty-sites-show-202-164-133-86.loca.lt/product/category/");
   }
+
+
+
+  
 
 
   // getDatabyId(id:any){

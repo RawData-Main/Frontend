@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
       this.auth.register(username,email,password,password2).subscribe((result: any) => {
         if (result) {
           // alert(result.message)
-          alert("login success")
+          alert("register success")
           this.router.navigateByUrl("/login")
         }
       },

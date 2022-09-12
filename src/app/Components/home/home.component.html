@@ -70,7 +70,7 @@
 <ul>
     <li *ngFor="let item of datas">
         <a >
-            <img src="{{item.image}}" routerLink="/item/{{item.id}}" alt="item images">
+            <img src="{{item.image}}" (click)="view(item)" alt="item images">
             <div class="content">
                 <div class="name">
                     {{item.name}}
@@ -83,7 +83,9 @@
                 {{item.price|currency:"$"}}
             </div>
             <div>
-                <button (click)="addToCart(item)">Add to Cart</button>
+                <div class="addtobtn">
+                    <button type="button" class="btn btn-outline-success" (click)="addToCart(item)">Add to Cart</button>
+                </div>
             </div>
         </a>
     </li>

@@ -1,0 +1,12 @@
+.banner{
+    background-image: url(../../assets/paymentbanner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 625px;
+}
+.banner .paypal{
+    padding: 50px;
+    width: 400px;
+    padding-top: 30%;
+    margin-left: 60%;
+}

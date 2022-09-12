@@ -19,6 +19,12 @@ import { PaymentComponent } from './Components/payment/payment.component';
 import { InvoiceComponent } from './Components/invoice/invoice.component';
 import { NgxPrintModule } from 'ngx-print';
 import {HttpClientModule} from '@angular/common/http';
+import { PlantsComponent } from './plants/plants.component';
+import { SeedsComponent } from './seeds/seeds.component';
+import { FertilizersComponent } from './fertilizers/fertilizers.component';
+import { ToolsComponent } from './tools/tools.component';
+import { Cart2Component } from './cart2/cart2.component';
+import { Payment2Component } from './payment2/payment2.component';
 
 
 @NgModule({
@@ -39,7 +45,13 @@ import {HttpClientModule} from '@angular/common/http';
     PaymentComponent,
     InvoiceComponent,
     AboutUsComponent,
-    RegisterComponent
+    RegisterComponent,
+    PlantsComponent,
+    SeedsComponent,
+    FertilizersComponent,
+    ToolsComponent,
+    Cart2Component,
+    Payment2Component,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Items } from 'src/app/Models/item';
 import { CartService } from 'src/app/services/cart.service';
 import { ItemService } from 'src/app/services/item.service';
@@ -10,9 +10,9 @@ import { ItemService } from 'src/app/services/item.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  items:Items[] = [];
+  // items:Items[] = [];
   datas:any = [];
-  constructor(private is:ItemService,private route:ActivatedRoute,private cart:CartService) { }
+  constructor(private router:Router,private is:ItemService,private route:ActivatedRoute,private cart:CartService) { }
 
   ngOnInit(): void {
 
@@ -43,13 +43,19 @@ export class HomeComponent implements OnInit {
     this.is.getApi().subscribe((res:any)=>{
       console.log(res);
       this.datas = res;
-      
     })
   }
 
   
   addToCart(item:any){
       this.cart.addToCart(item);
+      // let xyz = this.cart.addToCart(item);
+      // console.log("xyz",xyz);
+  }
+
+  view(item:any){
+    this.cart.getViewData(item);
+    this.router.navigateByUrl("/view")
   }
 
 }

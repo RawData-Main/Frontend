@@ -18,11 +18,13 @@ userDetails:any;
   }
 
   ngOnInit(): void {
+    console.log("tp",this.cs.totalPrice);
+    
     render(
       {
         id:"#myPaypalButtons",
         currency:"USD",
-        value:`${this.cart.totalPrice}`,
+        value:`${this.cs.totalPrice}`,
         onApprove:(details) => {
           // alert("Transaction Successfull")
           this.userDetails=details;
@@ -51,7 +53,7 @@ userDetails:any;
   }
 
   // setCart(){
-  //   this.cart = this.cs.getCart();
+  //   this.cart = this.cs.getTotalAmount;
   // }
 
 }

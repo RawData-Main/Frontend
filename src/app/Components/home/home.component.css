@@ -34,7 +34,7 @@ ul{
     padding: 0;
 }
 ul li a{
-    height: 27rem;
+    height: 30rem;
     width: 20rem;
     border: 1px solid  whitesmoke;
     border-radius: 1rem;
@@ -52,6 +52,8 @@ ul li a img{
 li a:hover{
     opacity: 0.8;
     cursor: pointer;
+    /* transform: scale(1.05);
+    transition: 0.3s ease; */
 }
 .content{
     padding: .5rem 1rem;
@@ -67,4 +69,11 @@ li a:hover{
     margin-top: .2rem;
     margin: 0.5rem;
 }
-
+.addtobtn{
+    text-align: center;
+}
+.addtocartbtn{
+    width: 100px;
+    outline: 1px solid rgb(5, 99, 5);
+    margin-bottom: 10px;
+}
